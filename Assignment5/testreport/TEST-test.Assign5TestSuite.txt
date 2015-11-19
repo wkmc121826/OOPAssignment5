@@ -1,0 +1,32 @@
+Testsuite: test.Assign5TestSuite
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.032 sec
+
+Testcase: testLevel1 took 0.016 sec
+Testcase: testLevel2 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at simpledatabase.Selection.next(Unknown Source)
+	at simpledatabase.Join.<init>(Unknown Source)
+	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+	at test.Assign5TestLevel2.testLevel2(Unknown Source)
+
+Testcase: testLevel3 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at simpledatabase.Selection.next(Unknown Source)
+	at simpledatabase.Join.<init>(Unknown Source)
+	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+	at test.Assign5TestLevel3.testLevel3(Unknown Source)
+
+Testcase: testLevel4 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at simpledatabase.Selection.next(Unknown Source)
+	at simpledatabase.Join.<init>(Unknown Source)
+	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+	at test.Assign5TestLevel4.testLevel4(Unknown Source)
+
+Testcase: testLevel5 took 0 sec
