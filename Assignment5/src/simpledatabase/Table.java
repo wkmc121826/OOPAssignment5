@@ -2,29 +2,25 @@ package simpledatabase;
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.io.IOException;
 
 public class Table extends Operator{
 	private BufferedReader br = null;
 	private boolean getAttribute=false;
 	private Tuple tuple;
-	private String Attr;
-	private String Type;
-	private String Cont;
-	public String from ="";
-	
+	private String At = "";
+	private String Ty = "";
+	private String Co = "";
 	public Table(String from){
 		this.from = from;
 		
 		//Create buffer reader
 		try{
-			br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/datafile/"+from+".csv")));
-			Attr = br.readLine();
-			Type = br.readLine();
-		
+			br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/datafile/"+from+".csv")));	
+			
 		}
+		
 		catch (Exception e) {
 			e.printStackTrace();
 		} 
@@ -39,22 +35,50 @@ public class Table extends Operator{
      */
 	@Override
 	public Tuple next(){
+		System.out.println(getAttribute);
 		
-		try {
-			Cont = br.readLine();	//Read new value
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		if (Cont!=null){		//return tuple if not empty
-			tuple = new Tuple (Attr,Type,Cont);	
+		
+		try{
+					
+		if(getAttribute==false)
+		{
+			At = br.readLine();
+			System.out.println(At);
+			Ty = br.readLine();
+			System.out.println(Ty);
+			System.out.println(getAttribute);
+			Co=  br.readLine();
+			if(Co != "")
+				{
+					tuple = new Tuple (At,Ty,Co);	
+					tuple.setAttributeName();
+					tuple.setAttributeType();
+					tuple.setAttributeValue();
+					getAttribute=true;
+					return tuple;
+				}}
+		else{
+
+            Co=  br.readLine();
+
+		if(Co != "")
+			{
+				
+			System.out.println(getAttribute);
+			tuple = new Tuple (At,Ty,Co);	
 			tuple.setAttributeName();
 			tuple.setAttributeType();
 			tuple.setAttributeValue();
-			
 			return tuple;
 		}
-		else return null;
+
+		}}
+		catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return null;
 	}
+	
 	
 
 	/**

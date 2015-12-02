@@ -7,7 +7,7 @@ public class Selection extends Operator{
 	String whereTablePredicate;
 	String whereAttributePredicate;
 	String whereValuePredicate;
-	boolean select = false;
+
 	
 	public Selection(Operator child, String whereTablePredicate, String whereAttributePredicate, String whereValuePredicate) {
 		this.child = child;
@@ -15,7 +15,6 @@ public class Selection extends Operator{
 		this.whereAttributePredicate = whereAttributePredicate;
 		this.whereValuePredicate = whereValuePredicate;
 		attributeList = new ArrayList<Attribute>();
-		 
 
 	}
 	
@@ -27,7 +26,7 @@ public class Selection extends Operator{
 	@Override
 	public Tuple next(){
 		Attribute temp = null;
-		
+		boolean select = false;
 		Tuple a = child.next();
 		if(a==null)
 		{
@@ -78,7 +77,8 @@ public class Selection extends Operator{
 			return b;
 		}
 		return a;	
-}
+			
+	}
 	
 	/**
      * The function is used to get the attribute list of the tuple

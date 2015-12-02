@@ -1,32 +1,100 @@
 Testsuite: test.Assign5TestSuite
-Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.032 sec
-
-Testcase: testLevel1 took 0.016 sec
-Testcase: testLevel2 took 0 sec
-	Caused an ERROR
-null
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+------------- Standard Output ---------------
+false
+id,Name,Programme,Scheme
+int,String,String,String
+false
+true
+true
+true
+true
+true
+true
+true
+true
+false
+id,Name,Programme,Scheme
+int,String,String,String
+false
+false
+id,Name,Programme,Scheme
+int,String,String,String
+false
+true
+true
+true
+true
+true
+true
+true
+true
+------------- ---------------- ---------------
+------------- Standard Error -----------------
 java.lang.NullPointerException
+	at simpledatabase.Tuple.<init>(Unknown Source)
+	at simpledatabase.Table.next(Unknown Source)
+	at simpledatabase.Projection.next(Unknown Source)
+	at test.Assign5TestLevel1.testLevel1(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+java.lang.NullPointerException
+	at simpledatabase.Tuple.<init>(Unknown Source)
+	at simpledatabase.Table.next(Unknown Source)
 	at simpledatabase.Selection.next(Unknown Source)
-	at simpledatabase.Join.<init>(Unknown Source)
-	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+	at simpledatabase.Projection.next(Unknown Source)
+	at test.Assign5TestLevel5.testLevel5(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)
+------------- ---------------- ---------------
+
+Testcase: testLevel1 took 0.01 sec
+Testcase: testLevel2 took 0.001 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
 	at test.Assign5TestLevel2.testLevel2(Unknown Source)
 
-Testcase: testLevel3 took 0 sec
-	Caused an ERROR
+Testcase: testLevel3 took 0.001 sec
+	FAILED
 null
-java.lang.NullPointerException
-	at simpledatabase.Selection.next(Unknown Source)
-	at simpledatabase.Join.<init>(Unknown Source)
-	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+junit.framework.AssertionFailedError
 	at test.Assign5TestLevel3.testLevel3(Unknown Source)
 
 Testcase: testLevel4 took 0 sec
-	Caused an ERROR
+	FAILED
 null
-java.lang.NullPointerException
-	at simpledatabase.Selection.next(Unknown Source)
-	at simpledatabase.Join.<init>(Unknown Source)
-	at simpledatabase.FormRAtree.structureTree(Unknown Source)
+junit.framework.AssertionFailedError
 	at test.Assign5TestLevel4.testLevel4(Unknown Source)
 
-Testcase: testLevel5 took 0 sec
+Testcase: testLevel5 took 0.002 sec

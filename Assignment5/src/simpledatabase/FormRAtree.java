@@ -28,7 +28,7 @@ public class FormRAtree{
      */
 	public void parseText(){
 		if(!whereText.isEmpty()){
-	
+		
 			col = whereText.split("\\.");
 			col1 = col[1].split("\\=");
 		
